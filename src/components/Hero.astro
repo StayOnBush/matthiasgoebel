@@ -1,0 +1,19 @@
+---
+import heroImage from '../../public/img/hero.png';
+---
+
+<style lang="scss">
+    .mg-hero {
+        width: 100%;
+        height: 100vh;
+        &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+</style>
+<div class="mg-hero">
+    <img src={heroImage} class="mg-hero-image" />
+</div>

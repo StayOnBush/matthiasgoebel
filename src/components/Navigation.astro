@@ -1,0 +1,74 @@
+---
+import logo from '../../public/img/logo.png';
+---
+<style lang="scss">
+    .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 3rem 6rem;
+        display: flex;
+        justify-content: space-between;
+        &-logo {
+            display: flex;
+            align-items: center;
+            img {
+                height: 20px;
+            }
+        }
+        &-burger {
+            width: 45px;
+            height: 30px;
+            padding: 5px 0 5px 5px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 20;
+
+            span {
+                width: 100%;
+                height: 2px;
+                background: #202020;
+                transition: all 350ms ease-in-out;
+            }
+            &:hover span:nth-child(2) {
+                transform: translateX(10px);
+            }   
+        }
+        &-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: gray;
+            z-index: 10;
+
+            p {
+                color: white;
+            }
+        }
+    }
+    .visible {
+        display: block;
+    }
+</style>
+
+<div class="navigation">
+    <div class="navigation-logo"><img src={logo}></div>
+    
+    <div class="navigation-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="navigation-menu">
+        <p>HELLO!!</p>
+    </div>
+</div>

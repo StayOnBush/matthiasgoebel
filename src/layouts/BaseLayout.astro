@@ -1,0 +1,25 @@
+---
+import Navigation from '../components/Navigation.astro';
+---
+
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Welcome to Astro</title>
+        <link rel="stylesheet" type="text/css"
+        href={Astro.resolve('../styles/utils.scss')} />
+	</head>
+	<body>
+		<Navigation />
+        <slot />
+		<script>
+			let nav = document.querySelector('.navigation-burger');
+			let navMenu = document.querySelector('.navigation-menu');
+
+			nav.addEventListener('click', function() {
+				navMenu.classList.toggle('visible');
+			});
+		</script>
+	</body>
+</html>
