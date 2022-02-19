@@ -12,6 +12,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
 	renderers: [],
 
 	devOptions: {
-		hostname: '192.168.2.104'
+		hostname: 'localhost'
 	  }
 });
