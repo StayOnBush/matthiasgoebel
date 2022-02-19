@@ -4,12 +4,15 @@ const { image } = Astro.props;
 ---
 
     <style>
-    
+    .card {
+        width:20%;
+        border-radius: 6px;
+    }
     
     </style>
 
     <div class="card">
-    <img  src="{image}" class="card-image" alt="image"/>
+    <img src={image} class="card-image" alt="image"/>
     <h3 class="card-headline">{title}</h3>
     
     </div>
