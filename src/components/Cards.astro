@@ -2,10 +2,31 @@
 import Card from '../components/Card.astro';
 ---
 
-    <div>
-     <Card title="Musiker" image="../../public/img/musiker.png"/>
-     <Card title="Pädagoge" image="../../public/img/pädagoge.png"/>
-     <Card title="Initiator" image="../../public/img/initiator.png"/>
-     <Card title="Malletinstitut" image="../../public/img/malletinstitut.png"/>
+<style lang="scss">
+.cards_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1000px;
+    gap: 2rem;
+    margin:auto;
+
+}
+
+.cards {
+    width: 100%;
+    padding: 4rem 0;
+}
+
+</style>
+
+<div class="cards">  
+    <div class="cards_container">
+     <Card title="Musiker" image="../../public/img/musiker.png" link="/"/>
+     <Card title="Pädagoge" image="../../public/img/pädagoge.png" link="/"/>
+     <Card title="Initiator" image="../../public/img/initiator.png" link="/"/>
+     <Card title="Malletinstitut" image="../../public/img/malletinstitut.png" link="/"/>
 
     </div>
+</div>
+
+
