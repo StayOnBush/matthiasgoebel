@@ -22,25 +22,37 @@
             }
         }
         &-event {
-            width: 100%;
-            padding: 2rem 0;
-            border-bottom: var.$border;
-            display: flex;
-            justify-content: space-between;
-            gap: 4rem;
-            &:first-child {
-                padding-top: 0;
-            }
+            display: block;
+
+
             &:last-child {
                 border-bottom: none;
             }
+
+
+            &-content {
+                width: 100%;
+                padding: 2rem 0;
+                border-bottom: var.$border;
+                display: flex;
+                justify-content: space-between;
+                gap: 4rem;
+
+                &-date {
+                    color: var.$primary;
+                }
+                &-name {
+                    color: var.$primary;
+                }
+            }
             &-date {
-                color: var.$primary;
+
             }
             &-name {
-                color: var.$primary;
+
             }
         }
+
         .button {
             display: flex;
             justify-content: center;
@@ -62,41 +74,44 @@
             </div>
 
             <div class="calendar-content-inner">
-                <div class="calendar-event">
-                    <div class="calendar-event-date">
-                        <h3>Datum</h3>
-                        <span>Uhrzeit</span>
+                <a href="/" class="calendar-event">
+                    <div class="calendar-event-content">
+                        <div class="calendar-event-date">
+                            <h3>Datum</h3>
+                            <span>Uhrzeit</span>
+                        </div>
+                        <div class="calendar-event-name">
+                            <h3>Event-Name</h3>
+                            <p>Lorem Ipsum dolor sit amet.</p>
+                        </div>
                     </div>
-                    <div class="calendar-event-name">
-                        <h3>Event-Name</h3>
-                        <p>Lorem Ipsum dolor sit amet.</p>
+                </a>
+                <a href="/">
+                    <div class="calendar-event-content">
+                        <div class="calendar-event-date">
+                            <h3>Datum</h3>
+                            <span>Uhrzeit</span>
+                        </div>
+                        <div class="calendar-event-name">
+                            <h3>Event-Name</h3>
+                            <p>Lorem Ipsum dolor sit amet.</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="calendar-event">
-                    <div class="calendar-event-date">
-                        <h3>Datum</h3>
-                        <span>Uhrzeit</span>
+                </a>
+                <a href="/">
+                    <div class="calendar-event-content">
+                        <div class="calendar-event-date">
+                            <h3>Datum</h3>
+                            <span>Uhrzeit</span>
+                        </div>
+                        <div class="calendar-event-name">
+                            <h3>Event-Name</h3>
+                            <p>Lorem Ipsum dolor sit amet.</p>
+                        </div>
                     </div>
-                    <div class="calendar-event-name">
-                        <h3>Event-Name</h3>
-                        <p>Lorem Ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-
-                <div class="calendar-event">
-                    <div class="calendar-event-date">
-                        <h3>Datum</h3>
-                        <span>Uhrzeit</span>
-                    </div>
-                    <div class="calendar-event-name">
-                        <h3>Event-Name</h3>
-                        <p>Lorem Ipsum dolor sit amet.</p>
-                    </div>
-                </div>
+                </a>
             </div>
             
-
         </div>
 
         <div class="button">

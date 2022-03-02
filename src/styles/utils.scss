@@ -1,7 +1,9 @@
+@use 'variables' as var;
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Source Sans Pro', serif;
+    color: var.$dark;
 }
 
 .spacer {
@@ -10,5 +12,12 @@
 
 h3 {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 900;
+    color: var.$primary;
+    letter-spacing: .5pt;
+}
+
+a {
+    display: block;
+    text-decoration: none;
 }
