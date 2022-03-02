@@ -1,0 +1,108 @@
+---
+
+---
+
+<style lang="scss">
+@use 'src/styles/variables' as var;
+    .calendar {
+        width: 100%;
+        padding: 6rem 0;
+        background: var.$light;
+
+        &-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+        }
+        &-content {
+            display: grid;
+            grid-template-columns: auto 1fr 50%;
+            margin-bottom: 4rem;
+            &-inner {
+            }
+        }
+        &-event {
+            width: 100%;
+            padding: 2rem 0;
+            border-bottom: var.$border;
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            &-date {
+                color: var.$primary;
+            }
+            &-name {
+                color: var.$primary;
+            }
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            button {
+            }
+        }
+    }
+</style>
+
+<div class="calendar">
+    <div class="calendar-container">
+        <div class="calendar-content">
+
+            <div class="headline">
+                Überschrift hier
+            </div>
+
+            <div class="spacer">
+            </div>
+
+            <div class="calendar-content-inner">
+                <div class="calendar-event">
+                    <div class="calendar-event-date">
+                        <h3>Datum</h3>
+                        <span>Uhrzeit</span>
+                    </div>
+                    <div class="calendar-event-name">
+                        <h3>Event-Name</h3>
+                        <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
+                <div class="calendar-event">
+                    <div class="calendar-event-date">
+                        <h3>Datum</h3>
+                        <span>Uhrzeit</span>
+                    </div>
+                    <div class="calendar-event-name">
+                        <h3>Event-Name</h3>
+                        <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
+                <div class="calendar-event">
+                    <div class="calendar-event-date">
+                        <h3>Datum</h3>
+                        <span>Uhrzeit</span>
+                    </div>
+                    <div class="calendar-event-name">
+                        <h3>Event-Name</h3>
+                        <p>Lorem Ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="button">
+            <button>
+            Klick mich
+            </button>
+        </div>
+    </div>
+</div>
