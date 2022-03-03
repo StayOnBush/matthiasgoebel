@@ -1,0 +1,37 @@
+@use 'src/styles/variables' as var;
+
+.calendar {
+    width: 100%;
+    padding: 6rem 0;
+    background: var.$light;
+
+    &-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+    }
+    &-content {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        margin-bottom: 6rem;
+        &-inner {
+        }
+    }
+    &-event {
+        width: 100%;
+        padding: 3rem 0;
+        border-bottom: var.$border;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
