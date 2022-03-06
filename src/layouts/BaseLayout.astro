@@ -15,8 +15,9 @@ import Navigation from '../components/Navigation.astro';
         <slot />
 		<script>
 			let nav = document.querySelector('.navigation-burger');
+			let navSpan = document.querySelectorAll('.navigation-burger-span');
 			let navMenu = document.querySelector('.navigation-menu');
-
+			
 			nav.addEventListener('click', function() {
 				navMenu.classList.toggle('visible');
 			});

@@ -1,4 +1,5 @@
 @use 'src/styles/variables' as var;
+@use 'src/styles/utils';
 
 .calendar {
     width: 100%;
@@ -9,6 +10,10 @@
         width: 100%;
         max-width: 1000px;
         margin: auto;
+
+        .button {
+            @include button_animated;
+        }
     }
     &-content {
         display: grid;
@@ -20,7 +25,7 @@
     &-event {
         width: 100%;
         padding: 3rem 0;
-        border-bottom: var.$border;
+        border-bottom: var.$border-light;
         &-inner {
             display: flex;
             justify-content: space-between;

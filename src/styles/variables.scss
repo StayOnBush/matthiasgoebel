@@ -1,9 +1,16 @@
 $primary: #091FD9;
 $primary-hover: #0719ae;
+$primary-shade: rgba($color: $primary,$alpha: .033);
 $orange: #ca6801;
 $yellow: #ffcc00;
 $dark: #202020;
 $light: #F8F8F8;
 $white: #ffffff;
 $round: 40px;
-$border: 1px solid rgba($color: $dark,$alpha: .075);
+$br-nm: 3px;
+$br-lg: 6px;
+$br-xl: 12px;
+$border-light: 1px solid rgba($color: $dark,$alpha: .075);
+$border: 1px solid rgba($color: $dark,$alpha: .175);
+$border-filled: 1px solid $primary;
+

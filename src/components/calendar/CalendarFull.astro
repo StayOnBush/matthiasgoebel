@@ -1,0 +1,59 @@
+---
+import Icon_Refresh from '../icons/Icon_Refresh.astro';
+import Icon_Search from '../icons/Icon_Search.astro';
+import Icon_Add_White from '../icons/Icon_Add_White.astro';
+---
+
+<div class="calendar-full">
+    <div class="calendar-full-top">
+        <div class="calendar-full-headline">
+            <h1>Kalender-Editor</h1>
+            <span>Hier können Events erstellt, bearbeitet oder gelöscht werden.</span>
+        </div>
+        <div class="calendar-full-actions">
+            <div class="button-light button-refresh"><Icon_Refresh />Refresh</div>
+            <div class="button"><Icon_Add_White />Neuer Eintrag</div>
+        </div>
+    </div>
+
+    <div class="calendar-full-main">
+        <div class="calendar-full-main-search">
+            <div class="input-wrapper">
+                <Icon_Search />
+                <input type="text" placeholder="Events durchsuchen">
+            </div>
+        </div>
+        <div class="calendar-full-main-table">
+            <div class="calendar-full-main-table-header">
+                <div class="calendar-full-main-table-date">
+                <p>Datum</p>
+                </div>
+                <div class="calendar-full-main-table-time">
+                <p>Uhrzeit</p>
+                </div>
+                <div class="calendar-full-main-table-title">
+                <p>Name</p>
+                </div>
+                <div class="calendar-full-main-table-description">
+                <p>Beschreibung</p>
+                </div>
+                <div class="calendar-full-main-table-actions">
+                <p>Aktionen</p>
+                </div>
+            </div>
+            <div class="calendar-full-main-table-content">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal-container">
+        <div class="modal-headline">
+        </div>
+        <div class="modal-content">
+        </div>
+        <div class="modal-actions">
+        </div>
+    </div>
+</div>

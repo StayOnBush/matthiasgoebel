@@ -1,0 +1,121 @@
+@use 'src/styles/variables' as var;
+@use 'src/styles/utils';
+
+.calendar-full {
+    margin-top: 138px;
+    padding: 0 6rem;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    &-headline {
+
+    }
+    &-actions {
+        display: flex;
+        gap: 1rem;
+        .button {
+            @include button;
+            letter-spacing: .75pt;
+        }
+        .button-light {
+            @include button_light;
+            letter-spacing: .75pt;
+        }
+    }
+
+    &-main {
+        &-search {
+            background: var.$primary-shade;
+            padding: 1.5rem;
+            border-radius: var.$br-xl;
+            margin-bottom: 2rem;
+            .input-wrapper {
+                border: var.$border;
+                border-radius: var.$br-lg;
+                position: relative;
+                background: var.$white;
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+            }
+            input {
+                width: 100%;
+                padding: 10px 15px;
+                text-indent: 25px;
+                border: none;
+                background: transparent;
+                font-size: 16px;
+                &::placeholder {
+                    color: var.$primary;
+                    transition: all 250ms ease;
+                }
+                &:focus {
+                    color: var.$dark;
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+
+            }
+        }
+        &-table {
+            &-header {
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                padding: 1rem 0;
+                border-bottom: var.$border-light;
+            }
+            &-content {
+
+            }
+            &-row {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(5, auto);
+                gap: 1rem;
+                padding: 1rem 0;
+                border-bottom: var.$border-light;
+            }
+            &-date, &-time {
+                min-width: 75px;
+                max-width: 75px;
+                display: flex;
+                align-items: center;
+            }
+            &-title {
+                min-width: 200px;
+                max-width: 200px;
+            }
+            &-title, &-description {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            &-actions {
+                min-width: 250px;
+                max-width: 300px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+                margin-left: auto;
+                button {
+                    max-height: 40px;
+                    @include button;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,8 @@
 @import 'fonts';
 @import 'variables';
 @import 'utils';
+@import '../components/icons/Icons';
 
 // Import component styles below
-@import '../components/calendar/calendar.scss';
+@import '../components/calendar/Calendar';
+@import '../components/calendar/CalendarFull';

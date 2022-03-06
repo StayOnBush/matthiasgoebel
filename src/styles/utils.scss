@@ -51,9 +51,17 @@ span {
     color: var.$primary;
 }
 
-.button {
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+// Spezial Kollege Button - Bitte aufräumen !! ->
+@mixin button_animated {
     display: flex;
     justify-content: center;
+    align-items: center;
     &-container {
         position: relative;
         padding: 12px 24px;
@@ -93,5 +101,74 @@ span {
             color: var.$white;
             transition: color 350ms ease;
         }
+    }
+}
+
+@mixin button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var.$primary;
+    border: none;
+    border-radius: var.$round;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5pt;
+    color: var.$white;
+    transition: all 350ms ease;
+    &:hover {
+        background: var.$primary-hover;
+    }
+}
+
+@mixin button_light {
+    @include button;
+    background: transparent;
+    border: var.$border-filled;
+    color: var.$primary;
+    &:hover {
+        color: var.$primary-hover;
+        border-color: var.$primary-hover;
+        background: transparent;
+    }
+}
+
+
+.bg-white {
+    background: white;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: var.$primary, $alpha: .5);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+        width: 100%;
+        max-width: 500px;
+        background: var.$white;
+        padding: 2rem;
+        border-radius: var.$br-xl;
+    }
+    &-headline {
+        h2 {
+
+        }
+    }
+    &-content {
+
+    }
+    &-actions {
+        display: flex;
+        gap: 10px;
     }
 }
