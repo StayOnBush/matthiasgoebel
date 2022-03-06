@@ -51,7 +51,23 @@ span {
     color: var.$primary;
 }
 
+label {
+    font-weight: 600;
+}
+
 input {
+    padding: 8px;
+    border: var.$border;
+    border-radius: var.$br-nm;
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    padding: 8px;
+    border: var.$border;
+    border-radius: var.$br-nm;
     &:focus {
         outline: none;
     }
@@ -135,7 +151,6 @@ input {
     }
 }
 
-
 .bg-white {
     background: white;
 }
@@ -153,6 +168,7 @@ input {
     align-items: center;
 
     &-container {
+        z-index: 10;
         width: 100%;
         max-width: 500px;
         background: var.$white;
@@ -160,15 +176,39 @@ input {
         border-radius: var.$br-xl;
     }
     &-headline {
+        width: 100%;
+        margin-bottom: 1rem;
         h2 {
-
         }
     }
     &-content {
+        width: 100%;
+        margin-bottom: 1rem;
 
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            max-height: 250px;
+            resize: vertical;
+        }
     }
     &-actions {
         display: flex;
         gap: 10px;
+
+        button:first-child {
+            @include button;
+        }
+        button:last-child {
+            @include button-light;
+        }
     }
 }

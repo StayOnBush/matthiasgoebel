@@ -5,11 +5,18 @@
     margin-top: 138px;
     padding: 0 6rem;
 
+    @media (max-width: $phablet) {
+        padding: 0 2rem;
+    }
+
     &-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+        @media (max-width:var.$phablet) {
+            align-items: flex-start;
+        }
     }
     &-headline {
 
@@ -17,6 +24,11 @@
     &-actions {
         display: flex;
         gap: 1rem;
+        @media (max-width:var.$phablet) {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-direction: column-reverse;
+        }
         .button {
             @include button;
             letter-spacing: .75pt;

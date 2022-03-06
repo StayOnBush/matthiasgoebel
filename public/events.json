@@ -1,13 +1,13 @@
 {
    "events": [
-        {"date":"29.02", "time":"19:30", "title":"1.Intensive Ensemblephasen", "description":"1.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"30.02", "time":"18:30", "title":"2.Intensive Ensemblephasen", "description":"2.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"01.03", "time":"17:30", "title":"3.Intensive Ensemblephasen", "description":"3.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"02.03", "time":"16:30", "title":"4.Intensive Ensemblephasen", "description":"4.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"03.03", "time":"15:30", "title":"5.Intensive Ensemblephasen", "description":"5.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"04.03", "time":"14:30", "title":"6.Intensive Ensemblephasen", "description":"6.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"05.03", "time":"13:30", "title":"7.Intensive Ensemblephasen", "description":"7.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"06.03", "time":"12:30", "title":"8.Intensive Ensemblephasen", "description":"8.Im Gegensatz zu JavaScript Code in dem Objekt"},
-        {"date":"07.03", "time":"11:30", "title":"9.Intensive Ensemblephasen", "description":"9.Im Gegensatz zu JavaScript Code in dem Objekt"}
+        {"date":"29.02.2022", "time":"19:30", "title":"1.Intensive Ensemblephasen", "description":"1.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"30.02.2022", "time":"18:30", "title":"2.Intensive Ensemblephasen", "description":"2.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"01.03.2022", "time":"17:30", "title":"3.Intensive Ensemblephasen", "description":"3.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"02.03.2022", "time":"16:30", "title":"4.Intensive Ensemblephasen", "description":"4.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"03.03.2022", "time":"15:30", "title":"5.Intensive Ensemblephasen", "description":"5.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"04.03.2022", "time":"14:30", "title":"6.Intensive Ensemblephasen", "description":"6.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"05.03.2022", "time":"13:30", "title":"7.Intensive Ensemblephasen", "description":"7.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"06.03.2022", "time":"12:30", "title":"8.Intensive Ensemblephasen", "description":"8.Im Gegensatz zu JavaScript Code in dem Objekt"},
+        {"date":"07.03.2022", "time":"11:30", "title":"9.Intensive Ensemblephasen", "description":"9.Im Gegensatz zu JavaScript Code in dem Objekt"}
     ]
 }

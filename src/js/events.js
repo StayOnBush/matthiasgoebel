@@ -1,5 +1,14 @@
-import events from '../../public/events.json';
-var events_length =  Object.entries(events).length;
+//import events from '../../public/events.json';
+
+// async function loadNames() {
+//     const response = await fetch('https://janheye.de/events.json');
+//     events = await response.json();
+//     console.log(events); 
+// }
+
+const res = await fetch('https://janheye.de/events.json');
+const events = await res.json();
+
 
 // calendar-teaser on start page
 let events_items = document.querySelectorAll('.calendar-event-inner');
@@ -27,10 +36,30 @@ let event_date;
 let event_time;
 let event_title;
 let event_desc;
-let modalvalue;
-let modalitem;
-let buttonType;
-let buttonTypeString;
+let event_buttons;
+
+let modal = document.querySelector('.modal');
+let modal_container = document.querySelector('.modal-container');
+
+let modal_headline = document.createElement('div')
+modal_headline.classList.add('modal-headline');
+
+let modal_content = document.createElement('div');
+modal_content.classList.add('modal-content');
+
+let modal_actions = document.createElement('div');
+modal_actions.classList.add('modal-actions');
+
+let modal_action_safe = document.createElement('button');
+modal_action_safe.classList.add('action-save');
+modal_action_safe.innerHTML = 'Speichern';
+let modal_action_del = document.createElement('button');
+modal_action_del.classList.add('action-delete');
+modal_action_del.innerHTML = 'Löschen';
+
+let modal_action_cancel = document.createElement('button');
+modal_action_cancel.classList.add('action-cancel');
+modal_action_cancel.innerHTML = 'Abbrechen';
 
 for (let i=0;i<events_events_length;i++) {
 
@@ -65,7 +94,7 @@ for (let i=0;i<events_events_length;i++) {
     let event_del = document.createElement('button');
     event_del.classList.add('action_del');
     event_del.innerHTML = `Löschen`;
-    let event_buttons = document.createElement('div');
+    event_buttons = document.createElement('div');
     event_buttons.classList.add('calendar-full-main-table-actions'); 
     event_buttons.appendChild(event_edit);
     event_buttons.appendChild(event_del);
@@ -78,51 +107,80 @@ for (let i=0;i<events_events_length;i++) {
     event_content.appendChild(event_row);
 
     event_buttons.addEventListener('click', function(item) {
-        modalvalue = i;
-        buttonType = item.target.classList;
-        buttonTypeString = buttonType.toString();
-
-        if(buttonTypeString === 'action_edit') {
+        if(item.target == event_edit) {
             let headline = 'Event Bearbeiten';
-            let edit;
-            showModal(edit, headline);
-        } else if(buttonTypeString === 'action_del') {
+            //removeModal();
+            showModal(headline, i, 1);
+        } else if(item.target == event_del) {
             let headline = 'Event Löschen';
-            let del;
-            showModal(del, headline);
-        } 
-    }); 
+            //removeModal();
+            showModal(headline, i, 2);
+        } else {
+            console.log("Fehler: Dieser Button existiert nicht.");
+        }
+    });
 }
 
-function showModal(a,b) {
-    let modal = document.querySelector('.modal');
-    let modal_container = document.querySelector('.modal-container');
-    let modal_headline = document.querySelector('.modal-headline');
-    modal_headline.innerHTML = b;
-    let modal_content = document.querySelector('.modal-content');
-    let modal_actions = document.querySelector('.modal-actions');
+function showModal(headline, i, type) {
 
-    let modal_action_safe = document.createElement('button');
-    modal_action_safe.classList.add('action-save');
-    let modal_action_del = document.createElement('button');
-    modal_action_del.classList.add('action-delete');
-    let modal_action_cancel = document.createElement('button');
-    modal_action_cancel.classList.add('action-cancel');
-    modal_action_cancel.innerHTML = 'Abbrechen';
+    modal.appendChild(modal_container);
 
-    modal_actions.appendChild(modal_action_cancel);
+    modal_headline.innerHTML = `<h3>${headline}</h3>`;
+
+    let eventDate = events.events[i].date;
+    let year = eventDate.slice(6, 10);
+    let month = eventDate.slice(3, 5);
+    let day = eventDate.slice(0, 2);
+    let finalDate = year + "-" + month + "-" + day;
+
+    let finalTime = events.events[i].time;
+
+    modal_content.innerHTML =
+                            `<div class="modal-content-date">
+                                <label>Datum</label>
+                                <input type="date" value="${finalDate}">
+                            </div>
+                            <div class="modal-content-time">
+                                <label>Uhrzeit</label>
+                                <input type="time" value="${finalTime}" step="3600">
+                            </div>
+                            <div class="modal-content-title">
+                                <label>Name</label>
+                                <input value="${events.events[i].title}">
+                            </div>
+                            <div class="modal-content-description">
+                                <label>Beschreibungstext</label>
+                                <textarea>${events.events[i].description}</textarea>
+                            </div>`;
+                            
+
+    modal.style.display = 'flex';
 
     modal_container.appendChild(modal_headline);
     modal_container.appendChild(modal_content);
     modal_container.appendChild(modal_actions);
-    modal.style.display = 'flex';
 
-    if(a = edit) {
-        console.log('1');
-    } else if(a = del) {
-        console.log('2');
+    if(type == 1) {
+        modal_actions.appendChild(modal_action_safe);
+        modal_actions.appendChild(modal_action_cancel);
+    } else if(type == 2) {
+        modal_actions.appendChild(modal_action_del);
+        modal_actions.appendChild(modal_action_cancel);
     }
+
+    modal_action_cancel.addEventListener('click', function closeModal() {
+        modal.style.display = 'none';
+        modal_container.remove();
+        modal_action_del.remove();
+        modal_action_safe.remove();
+    });
 }
+
+// function removeModal() {
+//     modal_action_del.remove();
+//     modal_action_safe.remove();
+//     modal_container.remove();
+// }
 
 
 
