@@ -24,22 +24,26 @@ h1,h2,h3,h4 {
 h1 {
     font-size: 48px;
     font-weight: 900;
+    color: var.$primary;
 }
 
+//Headline Component
 h2 {
     font-size: 40px;
     font-weight: 900;
-    //Headline Component
+    color: var.$primary;
 }
 
 h3 {
     font-size: 32px;
     font-weight: 900;
+    color: var.$primary;
 }
 
 h4 {
     font-size: 26px;
     font-weight: 900;
+    color: var.$primary;
 }
 
 a {
