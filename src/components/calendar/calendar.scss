@@ -15,6 +15,11 @@
             @include button_animated;
         }
     }
+    
+    &-headline {
+        text-align: left;
+    }
+
     &-content {
         display: grid;
         grid-template-columns: auto 1fr auto;
