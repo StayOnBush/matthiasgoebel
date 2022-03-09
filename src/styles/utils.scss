@@ -200,6 +200,9 @@ textarea {
             resize: vertical;
         }
     }
+    &-message {
+        margin-bottom: 1.5rem;
+    }
     &-actions {
         display: flex;
         gap: 10px;
