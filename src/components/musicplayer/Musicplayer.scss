@@ -1,8 +1,23 @@
-.Musicplayer {
-    &-container {
+@use 'src/styles/variables' as var;
+.musicplayer {
+    background: var.$white;
+    border: var.$border-light;
+    height: auto;
+    border-radius: var.$br-lg;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 1rem;
 
-    }
-    &-item {
-        
+    &-cover {
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }

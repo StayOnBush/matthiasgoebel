@@ -1,0 +1,21 @@
+@use 'src/styles/variables' as var;
+.musicslider {
+    padding: 6rem 0;
+
+    &-headline {
+
+    }
+    &-wrapper {
+        max-width: 1000px;
+        overflow: hidden;
+        margin: auto;
+    }
+    &-container {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.tns-liveregion {
+    display: none;
+}

@@ -1,12 +1,17 @@
 ---
-
+import Headline from '../headline/Headline.astro';
+const { cover } = Astro.props;
+const { alt } = Astro.props;
 ---
 
 <div class="musicplayer">
-    headline
-    <div class="musicplayer-container">
-        <div class="musicplayer-item">
-            
-        </div>
+    
+    <div class="musicplayer-cover">
+        <img src={cover} alt={alt}>
     </div>
+
+    <div class="musicplayer-player">
+        <div class="">Test</div>
+    </div>
+
 </div>
