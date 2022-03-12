@@ -1,23 +1,67 @@
 @use 'src/styles/variables' as var;
 .musicplayer {
-    background: var.$white;
-    border: var.$border-light;
+    background: var.$light;
     height: auto;
     border-radius: var.$br-lg;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    padding: 1rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: .5rem;
+    padding-right: 1.5rem;
+    cursor: default;
 
     &-cover {
         display: flex;
         align-items: center;
         img {
-            width: 100%;
+            // width: 100%;
+            // height: auto;
+            // aspect-ratio: 1/1;
+            // border-radius: 50%;
             height: auto;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
+            width: 100%;
+            border-radius: var.$br-lg;
             object-fit: cover;
             object-position: center;
         }
+    }
+    &-player {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    &-ui {
+        width: 100%;
+    }
+    &-title {
+
+    }
+    &-description {
+
+    }
+    &-timeline {
+        width: 100%;
+        height: 4px;
+        border-radius: var.$br-rd;
+        background: var.$white;
+        .timeline-played {
+            display: block;
+            width: 33.33%;
+            height: 5px;
+            border-radius: var.$br-rd;
+            background: var.$primary;
+        }
+    }
+    &-button {
+        background: var.$primary;
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: var.$br-rd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
     }
 }

@@ -9,10 +9,18 @@
         max-width: 1000px;
         overflow: hidden;
         margin: auto;
+        margin-bottom: 6rem;
     }
     &-container {
         display: flex;
         gap: 2rem;
+    }
+    &-button {
+        display: flex;
+        justify-content: center;
+        .button {
+            @include button;
+        }
     }
 }
 

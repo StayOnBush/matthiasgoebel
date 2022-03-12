@@ -5,11 +5,20 @@ import Headline from '../../headline/Headline.astro';
 
 <div class="musicslider">
 
-    <Headline klasse="musicslider-headline" headline="Meine Musikstücke" subline="Diese Musikstücke habe ich selbst komponiert und aufgenommen" margin="4rem" />
+    <Headline
+    klasse="musicslider-headline"
+    headline="Meine Musikstücke"
+    subline="Diese Musikstücke habe ich selbst komponiert und aufgenommen"
+    margin="4rem"
+    />
     
     <div class="musicslider-wrapper">
         <div class="musicslider-container">
-            <MusicPlayer cover="https://images.unsplash.com/photo-1542736488-0310e7bbc38a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=961&q=80" alt="1" />
+            <MusicPlayer cover="https://images.unsplash.com/photo-1542736488-0310e7bbc38a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=961&q=80"
+            alt="1"
+            title="My Track"
+            desc="Genre"
+            />
             <MusicPlayer cover="https://images.unsplash.com/photo-1542736488-0310e7bbc38a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=961&q=80" alt="1" />
             <MusicPlayer cover="https://images.unsplash.com/photo-1542736488-0310e7bbc38a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=961&q=80" alt="1" />
             <MusicPlayer cover="https://images.unsplash.com/photo-1542736488-0310e7bbc38a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=961&q=80" alt="1" />
@@ -22,4 +31,11 @@ import Headline from '../../headline/Headline.astro';
             <MusicPlayer /> -->
         </div>
     </div>
+
+    <div class="musicslider-button">
+        <div class="button">
+            Mehr ansehen
+        </div>
+    </div>
+
 </div>

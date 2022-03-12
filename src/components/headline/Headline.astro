@@ -5,9 +5,10 @@ const { klasse } = Astro.props;
 const { subline } = Astro.props;
 const { bottom } = Astro.props;
 const { margin } = Astro.props;
+const { color } = Astro.props;
 ---
 
 <div class={klasse} style=`margin-bottom:${margin}`>
-    <h2 class="headline">{headline}</h2>
-    <p class="subline">{subline}</p>
+    <h2 class="headline" style="color:${color}">{headline}</h2>
+    <p class="subline" style="color:${color}">{subline}</p>
 </div>

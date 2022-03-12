@@ -1,7 +1,11 @@
 ---
 import Headline from '../headline/Headline.astro';
+import Icon_Play from '../icons/Icon_Play_White.astro';
 const { cover } = Astro.props;
 const { alt } = Astro.props;
+const { title } = Astro.props;
+const { desc } = Astro.props;
+const { time } = Astro.props;
 ---
 
 <div class="musicplayer">
@@ -11,7 +15,22 @@ const { alt } = Astro.props;
     </div>
 
     <div class="musicplayer-player">
-        <div class="">Test</div>
+
+        <div class="musicplayer-ui">
+            <p class="musicplayer-title">{title}</p>
+            <p class="musicplayer-description">{desc}</p>
+            <div class="musicplayer-timeline">
+                <div class="timeline">
+                    <span class="timeline-played"></span>
+                </div>
+            </div>
+            <!--time starts from length of title, counting down and not up-->
+            <p class="musicplayer-time">{time}</p>
+        </div>
+
+        <div class="musicplayer-button">
+        <Icon_Play width="23px" />
+        </div>
     </div>
 
 </div>

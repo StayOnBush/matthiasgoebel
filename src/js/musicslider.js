@@ -2,12 +2,12 @@
 
 var music_teaser_slider = tns({
     container: '.musicslider-container',
-    items: 3,
+    items: 2,
     slideBy: '1',
     controls: false,
     nav: false,
     autoplayButtonOutput: false,
     speed: "1500",
-    fixedWidth: "45",
+    //fixedWidth: "45",
     mouseDrag: true
 });

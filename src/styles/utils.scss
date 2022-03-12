@@ -120,6 +120,7 @@ textarea {
             letter-spacing: .5pt;
             color: var.$white;
             transition: color 350ms ease;
+            font-family: 'Fraunces', serif;
         }
     }
 }
@@ -133,6 +134,7 @@ textarea {
     border-radius: var.$round;
     padding: 12px 24px;
     cursor: pointer;
+    font-family: 'Fraunces', serif;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: .5pt;
@@ -145,6 +147,7 @@ textarea {
 
 @mixin button_light {
     @include button;
+    font-family: 'Source Sans Pro';
     background: transparent;
     border: var.$border-filled;
     color: var.$primary;
@@ -152,6 +155,16 @@ textarea {
         color: var.$primary-hover;
         border-color: var.$primary-hover;
         background: transparent;
+    }
+}
+
+@mixin button_white {
+    @include button;
+    font-family: 'Fraunces', serif;
+    background: var.$white;
+    color: var.$primary;
+    &:hover {
+        background: var.$white
     }
 }
 
